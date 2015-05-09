@@ -53,9 +53,9 @@ class SlackInterfaceRequestHandler
                     when 'rename' then status = @spotify.rename_playlist @auth.args[1], @auth.args[2]
                     else status = @spotify.set_playlist @auth.args[0]
                   if status
-                    reply_data['text'] = ['Ok.', 'Sweet.', 'Chur.', 'Done like dinner.', 'Sorted.org.nz (use your mouse!)', 'Coolies.', 'No problem, brah.', 'Affirmative.', 'Gotcha.', 'Aye-aye, captain! :captain:'][Math.floor(Math.random() * 10)] 
+                    reply_data['text'] = ['Ok.', 'Sweet.', 'Chur.', 'Done like dinner.', 'Sorted.org.nz (use your mouse!)', 'Coolies.', 'No problem, brah.', 'Affirmative.', 'Gotcha.', 'Aye-aye, captain! :captain:'][Math.floor(Math.random() * 10)]
                   else
-                    reply_data['text'] = "Oops, you did it again. Try `help` if you need som."
+                    reply_data['text'] = "Oops, you did it again. Try `help` if you need some."
                 else
                   str = 'Currently available playlists:'
                   for key of @spotify.playlists
