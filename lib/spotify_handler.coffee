@@ -252,9 +252,9 @@ class SpotifyHandler
   _sanitize_link: (link) ->
     link.replace /[/]/g, ':'
     link.replace /[^0-9a-zA-Z:#]/g, ''
-    if link.substring(0, 4) === "https"
+    if link.substring(0, 5) === "https"
       link.replace('https', 'http')
-    if link.substring(0, 3) === "http"
+    if link.substring(0, 4) === "http"
       link.replace('http:::openspotifycom', 'spotify')
 
 
